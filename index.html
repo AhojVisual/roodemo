@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>踩地雷</title>
+    <link rel="stylesheet" href="css/minesweeper.css" />
+  </head>
+  <body>
+    <h1>踩地雷<img src="image/mine.png" alt="地雷圖片" /></h1>
+    <label class="minesize">地圖大小：</label>
+    <div id="size-buttons">
+      <button class="size-button" data-size="small">小 (8x8, 8 mines)</button>
+      <button class="size-button" data-size="medium">
+        中 (10x10, 12 mines)
+      </button>
+      <button class="size-button" data-size="large">
+        大 (12x12, 16 mines)
+      </button>
+    </div>
+    <div class="calTime">時間 : <span id="timer">0</span></div>
+    <button id="start">開始遊戲</button>
+    <!-- 遊戲進行區塊 -->
+    <div id="game"></div>
+    <!-- 遊戲結束區塊 -->
+    <div id="end-game" style="display: none">
+      <h1 class="end-message"></h1>
+      <button id="restart">重新開始</button>
+    </div>
+    <script src="js/minesweeper.js"></script>
+  </body>
+</html>
