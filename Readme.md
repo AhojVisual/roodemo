@@ -36,7 +36,7 @@
 *   `css/minesweeper.css`：CSS 檔案
 *   `js/minesweeper.js`：JavaScript 檔案
 
-## 語法重點分類整理
+## 語法重點整理
 
 1. DOM 取得與操作
     * document.getElementById('id')：取得指定 id 的元素。
@@ -84,7 +84,7 @@
     * endGame(true/false)：結束遊戲並顯示結果。
 
 
-## 地雷遊戲需要設定的邏輯功能
+## 邏輯功能
 
 1. 地圖與地雷生成 (function generateBoard())
 
