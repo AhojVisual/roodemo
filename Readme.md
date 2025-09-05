@@ -60,7 +60,11 @@
     * e.target：取得觸發事件的元素。
   
 # 動態建立元素
+    * 動態建立元素達到互動效果
+    * cell.classList.add('revealed'); 寫法，揭示在class屬性加上revealed，表示已被翻開的格子。
+    * game.style.display = 'grid'; 地雷board的出現與隱藏。 
     * document.createElement('div')：建立新元素。
+    * .innerHTML: 前端內容文字改變。
     * parent.appendChild(child)：將新元素加入父層。
 
 # class 操作
