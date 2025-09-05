@@ -38,28 +38,28 @@
 
 ## 語法重點分類整理
 
-# DOM 取得與操作
+1. DOM 取得與操作
     * document.getElementById('id')：取得指定 id 的元素。
     * document.querySelector('.class') / document.querySelectorAll('.class')：取得指定 class 的單一或全部元素。
     * element.addEventListener('click', function)：監聽點擊事件，常用於按鈕或格子互動。
   
-# 資料屬性與 dataset
+2. 資料屬性與 dataset
     * element.dataset.xxx：取得或設定自訂 data 屬性（如 data-mine、data-index）。
     * 注意：dataset 取出的值一律是「字串」。
   
-# 條件判斷與型別
+3. 條件判斷與型別
     * if (cell.dataset.mine)：非空字串在 JS 條件判斷中為 true。
     * if (cell.dataset.mine === 'true')：精確比對字串內容。
   
-# 迴圈與陣列操作
+4. 迴圈與陣列操作
     * forEach：遍歷陣列或 NodeList，例如 document.querySelectorAll('.size-button').forEach(...)。
     * for (let i = 0; i < arr.length; i++)：基本 for 迴圈。
   
-# 事件處理
+5. 事件處理
     * element.addEventListener('contextmenu', function(e){ e.preventDefault(); ... })：右鍵事件，常用於插旗。
     * e.target：取得觸發事件的元素。
   
-# 動態建立元素
+6. 動態建立元素
     * 動態建立元素達到互動效果
     * cell.classList.add('revealed'); 寫法，揭示在class屬性加上revealed，表示已被翻開的格子。
     * game.style.display = 'grid'; 地雷board的出現與隱藏。 
@@ -67,19 +67,19 @@
     * .innerHTML: 前端內容文字改變。
     * parent.appendChild(child)：將新元素加入父層。
 
-# class 操作
+7. class 操作
     * element.classList.add('className') / element.classList.remove('className')：新增或移除 class。
     * element.classList.contains('className')：判斷是否有某個 class。
   
-# 計時器
+8. 計時器
     * setInterval(function, 1000)：每秒執行一次，用於計時。
     * clearInterval(timer)：停止計時。
 
-# 隨機數與地雷生成
+9. 隨機數與地雷生成
     * Math.random()：產生 0~1 之間的隨機數。
     * Math.floor(Math.random() * n)：產生 0~n-1 的整數。
 
-# 勝負判斷與遊戲邏輯
+10. 勝負判斷與遊戲邏輯
     * if (revealedCount === gridSize * gridSize - mines)：判斷是否勝利。
     * endGame(true/false)：結束遊戲並顯示結果。
 
