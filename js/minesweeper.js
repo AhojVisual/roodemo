@@ -52,8 +52,9 @@ startButton.addEventListener('click', () => {
     startButton.style.display = 'none';
 });
 
-let firstClick = true;
+let firstClick;
 function generateBoard() {
+    firstClick = true;
     board = [];
     game.innerHTML = '';
     game.className = selectedSize; // 設定地圖大小的 class
