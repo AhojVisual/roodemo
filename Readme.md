@@ -36,13 +36,48 @@
 *   `css/minesweeper.css`：CSS 檔案
 *   `js/minesweeper.js`：JavaScript 檔案
 
-## 語法重點
+## 語法重點分類整理
 
-*   inline-style 優先法則
-*   dataset 取出來的值一律是「字串」
-*   JavaScript 條件判斷的規則中，非空字串一律為true,所以if (cell.dataset.mine)中即使cell.dataset.mine= false, 還是會得到 true 結果。
-*   藉由 document.getElementById 抓取 html 裡面的 id 來進行如: sizeButtons.addEventListener('click', (e) => 等點擊事件
-*   該程式則是負責抓取所有class屬性值為.size-button > document.querySelectorAll('.size-button').forEach(button =>
+# DOM 取得與操作
+    * document.getElementById('id')：取得指定 id 的元素。
+    * document.querySelector('.class') / document.querySelectorAll('.class')：取得指定 class 的單一或全部元素。
+    * element.addEventListener('click', function)：監聽點擊事件，常用於按鈕或格子互動。
+  
+# 資料屬性與 dataset
+    * element.dataset.xxx：取得或設定自訂 data 屬性（如 data-mine、data-index）。
+    * 注意：dataset 取出的值一律是「字串」。
+  
+# 條件判斷與型別
+    * if (cell.dataset.mine)：非空字串在 JS 條件判斷中為 true。
+    * if (cell.dataset.mine === 'true')：精確比對字串內容。
+  
+# 迴圈與陣列操作
+    * forEach：遍歷陣列或 NodeList，例如 document.querySelectorAll('.size-button').forEach(...)。
+    * for (let i = 0; i < arr.length; i++)：基本 for 迴圈。
+  
+# 事件處理
+    * element.addEventListener('contextmenu', function(e){ e.preventDefault(); ... })：右鍵事件，常用於插旗。
+    * e.target：取得觸發事件的元素。
+  
+# 動態建立元素
+    * document.createElement('div')：建立新元素。
+    * parent.appendChild(child)：將新元素加入父層。
+
+# class 操作
+    * element.classList.add('className') / element.classList.remove('className')：新增或移除 class。
+    * element.classList.contains('className')：判斷是否有某個 class。
+  
+# 計時器
+    * setInterval(function, 1000)：每秒執行一次，用於計時。
+    * clearInterval(timer)：停止計時。
+
+# 隨機數與地雷生成
+    * Math.random()：產生 0~1 之間的隨機數。
+    * Math.floor(Math.random() * n)：產生 0~n-1 的整數。
+
+# 勝負判斷與遊戲邏輯
+    * if (revealedCount === gridSize * gridSize - mines)：判斷是否勝利。
+    * endGame(true/false)：結束遊戲並顯示結果。
 
 
 ## 地雷遊戲需要設定的邏輯功能
